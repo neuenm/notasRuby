@@ -1,0 +1,27 @@
+-if @lista.empty?
+  p
+    No hay notas
+-else
+   - @lista.each do |item|
+     ul class="collapsible popout" data-collapsible="accordion"
+      li
+        div class="collapsible-header  lime lighten-3"
+          h5 
+           =item.titulo
+           div class="pull right"
+            =item.estado
+           a name="id" class= "btn-floating btn-large waves-effect waves-light pull right green darken-4" href="/estado/#{item.id}"
+             i class="material-icons" done
+          
+
+        div class="collapsible-body lime lighten-4" 
+          p class="chip" Acordate de:
+          p = item.content
+          p class="chip" Ultima modificacion:
+          p = item.fechaini
+          p class="chip" Tenes que hacerlo antes del
+          p = item.fechafin
+          a name="id" class= "btn-floating btn-large waves-effect waves-light red accent-4 pull right" href="/elimina/#{item.id}"
+            i class="material-icons" delete
+          a name="id" class= "btn-floating btn-large waves-effect waves-light indigo accent-1 pull right" href="/selecciona/#{item.id}"
+            i class="material-icons" edit

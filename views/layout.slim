@@ -1,0 +1,28 @@
+html
+  head
+    title Notas
+    link rel="stylesheet" href="/css/materialize.min.css" 
+    link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" 
+    script src="/js/jquery-3.2.1.js" 
+    script src="/js/materialize.js" 
+
+
+  body class="grey lighten-1"
+   <nav class="black">
+    <div class="nav-wrapper">
+      <a href="/lista" class="brand-logo">To Do List</a>
+      a class= "btn-floating btn-large waves-effect waves-light green accent-3 pulse pull right" href="/nueva"
+       i class="material-icons" add
+    </div>
+  </nav>
+
+  == yield
+      
+
+javascript:
+  $(document).ready(function(){
+    $(".collapsible").collapsible();
+    $(".button-collapse").sideNav();
+    $('.modal').modal();
+  });
+

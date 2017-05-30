@@ -1,0 +1,13 @@
+form action="/update/#{@not.id}" method="post"
+  h3
+    h4 Editar nota:  
+    h5 Titulo
+    input name = "titulo" type = "text" value="#{@not.titulo}"
+    h5 Nota
+    textarea name="content" type = "text" value="#{@not.content}"
+    h5 Fecha de Finalizacion
+    input type="date" name="fechafin" value="#{@not.fechafin}"
+  p
+   <button class="btn waves-effect waves-light" type="submit" name="action">Listo
+    <i class="material-icons right">send</i>
+  </button>
